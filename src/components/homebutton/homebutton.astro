@@ -1,0 +1,9 @@
+---
+import './main.css';
+
+import { Image } from 'astro:assets';
+import img_home from './home.png';
+
+const { homebutton_hidden } = Astro.props;
+---
+{!homebutton_hidden && <p class="home"><a href="/"><Image src={img_home} alt="" height="40"/></a></p>}

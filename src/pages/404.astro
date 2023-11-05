@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/PortfolioLayout.astro';
+const pageTitle = "404 Not Found.";
+const url="/404"
+
+import { Image } from 'astro:assets';
+import img_404 from '../images/404.png';
+
+---
+<BaseLayout pageTitle={pageTitle}, page_url={url}>
+    <Image src={img_404} alt="404 not found..." width="700"/>
+</BaseLayout>
