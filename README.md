@@ -18,3 +18,7 @@ docker run --rm -v $PWD:/src -w /src -u `id -u`:`id -g` -p 4321:4321 -it node:lt
 - about.astroの変換にて、build後 `docs/about/index.html`へ出力されるが、埋め込みCSSのURLが修正されず、URLのパスが誤った状態になる。  
     - `astro-relative-links`は感知しない様子。
     - 絶対パスを設定。画像は `public`に配置して対応。
+
+## OGPカードが表示されない
+
+- metaタグのOGPが機能していない。
