@@ -1,0 +1,16 @@
+---
+import './main.css';
+import { Image } from 'astro:assets';
+import img_twitter from './icons/twitter.png';
+import img_instagram from './icons/instagram.png';
+import img_pixiv from './icons//pixiv.png';
+import img_zenn from './icons/zenn.png';
+import img_mail from './icons/mail.png';
+---
+<p class="social">
+    <a href="https://twitter.com/Il_______l"><Image src={img_twitter} alt=""/></a>
+    <a href="https://www.instagram.com/l._________l/"><Image src={img_instagram} alt=""/></a>
+    <a href="https://www.pixiv.net/users/61472849"><Image src={img_pixiv} alt=""/></a>
+    <a href="https://zenn.dev/nkte8"><Image src={img_zenn} alt=""/></a>
+    <a href="mailto: info@184.moo.jp"><Image src={img_mail} alt=""/></a>
+</p>

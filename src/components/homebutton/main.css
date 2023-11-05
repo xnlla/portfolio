@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.home img {
+    margin: 20px 0px 5px 0px;
+    transform: scale(1.0);
+    transition: .2s ease-in-out;
+}
+.home img:hover {
+    transform: scale(1.2);
+}

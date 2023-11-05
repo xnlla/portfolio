@@ -1,0 +1,35 @@
+---
+import '../styles/portfolio.css';
+import Footer from '../components/footer/footer.astro';
+import Homebutton from '../components/homebutton/homebutton.astro';
+
+const base_url = import.meta.env.SITE
+const { pageTitle, homebutton_hidden, page_url } = Astro.props;
+
+const url = base_url + page_url
+---
+
+<html lang="en">
+  <head>
+    <head prefix="og: https://ogp.me/ns#">
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="184" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/card.png" />
+    <meta property="og:image" content="/card.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} >
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="contents">
+      <slot />
+      <Homebutton homebutton_hidden={homebutton_hidden}/>
+      <Footer />
+    </div>
+  </body>
+</html>
