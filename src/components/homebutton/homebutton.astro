@@ -1,9 +1,14 @@
 ---
 import './main.css';
 
-import { Image } from 'astro:assets';
-import img_home from './home.png';
+// import { Image } from 'astro:assets';
+const base_url = import.meta.env.SITE;
+const img_home_url = base_url + "/home.png";
 
 const { homebutton_hidden } = Astro.props;
 ---
-{!homebutton_hidden && <p class="home"><a href="/"><Image src={img_home} alt="" height="40"/></a></p>}
+{!homebutton_hidden &&
+    <p class="home">
+        <a href={base_url}><img src={img_home_url} alt="home" /></a>
+    </p>
+}
