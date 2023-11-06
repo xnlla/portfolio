@@ -4,9 +4,18 @@
 
 # 実行方法
 
+astroの実行
 ```
 # init
 docker run --rm -v $PWD:/src -w /src -u `id -u`:`id -g` -p 4321:4321 -it node:lts npm install
-# debug
-docker run --rm -v $PWD:/src -w /src -u `id -u`:`id -g` -p 4321:4321 -it node:lts npm run dev
+
+# shell debug
+docker run --rm -v $PWD:/src -w /src -u `id -u`:`id -g` -p 4321:4321 -it node:lts /bin/bash
+npm run dev
+```
+
+ロリポップftpサーバへのアップロード
+```
+# .netrc でレンタルサーバへアクセスする情報が記載されていること
+./upload.sh
 ```
