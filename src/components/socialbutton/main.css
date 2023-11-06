@@ -15,8 +15,8 @@ a,a:visited {
 .social img {
     transform: scale(1.0);
     transition: .2s ease-in-out;
-    height: 50px;
-    width: auto;
+    /* height: 50px;
+    width: auto; */
 }
 .social img:hover {
     transform: scale(1.2);

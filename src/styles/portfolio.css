@@ -2,7 +2,7 @@ html {
     /* background: linear-gradient(#fff 50%, #e5e5e5 75%, #dfdfdf); */
     background-color: #fff;
     /* font-family: sans-serif; */
-    height: 100%;
+    /* height: 100%; */
     font-size: 15px;
 }
   
@@ -18,7 +18,7 @@ body {
     text-align: center;
 }
 
-img {
+.front img {
     max-width: 95%;
     height: auto;
 }
