@@ -7,5 +7,6 @@ PORT=22
 
 PATH="/var/www/html/"
 
+/usr/bin/ssh -p $PORT ${SERVER} "rm -rf ${PATH}/*"
 /usr/bin/scp -r -P $PORT ./docs/* ${SERVER}:${PATH}
 /usr/bin/ssh -p $PORT ${SERVER} "sudo systemctl restart nginx"
