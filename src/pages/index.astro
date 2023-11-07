@@ -2,7 +2,8 @@
 import BaseLayout from '../layouts/PortfolioLayout.astro';
 const pageTitle = "ㅤ";
 const url="/"
-import Socialbutton from '../components/socialbutton/socialbutton.astro';
+import Socialbutton from '../components/socialbutton/main.astro';
+import Menubutton from '../components/menu/main.astro';
 
 import { Image } from 'astro:assets';
 import img_site from '../images/site.png';
@@ -10,6 +11,6 @@ const homebutton_hidden = true;
 ---
 <BaseLayout pageTitle={pageTitle}, homebutton_hidden={homebutton_hidden}, page_url={url}>
     <p class="front"><Image src={img_site} alt="hello world" /></p>
-    <a href="about">about</a>
-<Socialbutton />
+    <Menubutton />
+    <Socialbutton />
 </BaseLayout>
