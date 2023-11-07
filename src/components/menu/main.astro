@@ -9,6 +9,10 @@ const links = [
 ]
 
 ---
-<p class="social">
-    {links.map((item) => <a href={item.link}><Image src={item.src} alt="" height="50"/></a>)}
+<p class="menu">
+    {links.map((item) =>
+        <a href={item.link}>
+            <Image src={item.src} alt="" height="50"/>
+        </a>
+    )}
 </p>
