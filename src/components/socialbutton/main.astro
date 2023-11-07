@@ -1,0 +1,33 @@
+---
+import './main.css';
+import { Image } from 'astro:assets';
+import img_twitter from './icons/twitter.png';
+import img_instagram from './icons/instagram.png';
+import img_pixiv from './icons//pixiv.png';
+import img_zenn from './icons/zenn.png';
+import img_mail from './icons/mail.png';
+import img_github from './icons/github.png';
+
+const links = [
+    {   src: img_twitter,
+        link: "https://twitter.com/Il_______l"},
+    {   src: img_instagram,
+        link: "https://www.instagram.com/l._________l/"},
+    {   src: img_pixiv,
+        link: "https://www.pixiv.net/users/61472849"},
+    {   src: img_zenn,
+        link: "https://zenn.dev/nkte8"},
+    {   src: img_github,
+        link: "https://github.com/nkte8"},
+    {   src: img_mail,
+        link: "mailto: info@184.moo.jp"},
+]
+
+---
+<p class="social">
+    {links.map((item) => 
+        <a href={item.link}>
+            <Image src={item.src} alt="" height="50"/>
+        </a>
+    )}
+</p>

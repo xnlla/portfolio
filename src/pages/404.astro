@@ -6,10 +6,10 @@ const url="/404";
 // import { Image } from 'astro:assets';
 // import img_404 from '../images/404.png';
 
-const base_url = import.meta.env.SITE;
-const img_404_url = base_url + "/404.png";
+// const base_url = import.meta.env.SITE;
+// const img_404_url = base_url + "/404.png";
 ---
 <BaseLayout pageTitle={pageTitle}, page_url={url}>
     <!-- <Image src={img_404_url} alt="404 not found..." width="700" height="500"/> -->
-    <img src={img_404_url} alt="404 not found..." width="90%" height="auto"/>
+    <img src="/404.png" alt="404 not found..." width="90%" height="auto"/>
 </BaseLayout>

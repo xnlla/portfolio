@@ -1,0 +1,18 @@
+---
+import './main.css';
+import { Image } from 'astro:assets';
+import img_about from './icons/about.png';
+
+const links = [
+    {   src: img_about,
+        link: "about"},
+]
+
+---
+<p class="menu">
+    {links.map((item) =>
+        <a href={item.link}>
+            <Image src={item.src} alt="" height="50"/>
+        </a>
+    )}
+</p>
