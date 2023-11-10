@@ -1,5 +1,8 @@
 #!/bin/bash
 cd $(dirname $0)
+git branch --contains | grep main
+[[ $? -ne 0 ]] && echo "mainブランチでのみ実行が許可されます。" && exit 1;
+
 FILELIST=$(pwd)/putlist
 PAAS_URL=ftp.lolipop.jp
 
