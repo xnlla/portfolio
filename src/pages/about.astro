@@ -3,13 +3,50 @@ import BaseLayout from '../layouts/PortfolioLayout.astro';
 const pageTitle = "ㅤ - about";
 const url="/about"
 
+import img_about from '../images/computing.png';
+
 ---
+<style>
+
+    .big-text{
+        font-size: 3.7vmin;
+    }
+
+    .text {
+
+        position: absolute;
+        top: 20px;
+        right: auto;
+        left: 40%;
+        height: auto;
+        width: 58%;
+        font-size: 2.7vmin;
+        text-align: left;
+        z-index: 10;
+    }
+    .image {
+        top: auto;
+        left: 0;
+        position: absolute;
+        margin-left: -25px;
+        width: 100%;
+        max-width:600px;
+        bottom: 10%;
+        z-index: 0;
+    }
+
+</style>
 <BaseLayout pageTitle={pageTitle}, page_url={url}>
-    <p>突然Webサイトを作りたくなって生まれました。<p/>
-    <p>今後コンテンツを増やしていけたらいいな...と思っています。</p>
-    <p>
-        <br><a href="https://astro.build/">astro</a>でプログラミングされました。</br>
-        <br><a href="https://lolipop.jp/">ロリポップレンタルサーバ</a>のエコノミープランで運用中です。</br>
-        <br><a href="https://github.com/nkte8/portfolio">ソースコード</a>を公開しています。</br>  
-    </p>
+        <img src={img_about.src} alt="" class="image" />
+        <div class="text">
+            <p><div class="big-text">突然Webサイトを作りたくなって<br />生まれました。</div><p/>
+            <p>今後コンテンツを増やしていけたらいいな...<br />と思っています。</p>
+            <p>
+                <a href="https://astro.build/">astro</a>でプログラミングされました。<br />
+                <a href="https://lolipop.jp/">ロリポップ</a>のエコノミープランで運用中です。<br />
+                <a href="https://github.com/nkte8/portfolio">ソースコード</a>を公開しています。<br />
+            </p>
+        </div>
+        
+
 </BaseLayout>
