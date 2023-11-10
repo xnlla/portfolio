@@ -1,8 +1,18 @@
 .header {
-    padding: 20px;
+    padding: 0;
     margin: 0;
+    position: static;
+    top:0px;
+    left:0px;
+    height: 20px;
 }
 
 .header img {
     width: 100%;
+    background-image: url(/header.png);
+    background-size: 100%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    position: static;
+    top:0px;
+    z-index: 100;
 }
