@@ -1,7 +1,7 @@
 html {
     /* background: linear-gradient(#fff 50%, #e5e5e5 75%, #dfdfdf); */
     background-color: #fff;
-    /* font-family: sans-serif; */
+    font-family: sans-serif;
     /* height: 100%; */
     font-size: 15px;
 }
@@ -21,4 +21,16 @@ body {
 .front img {
     max-width: 95%;
     height: auto;
+}
+
+a,a:visited {
+    text-decoration: none;
+    color: #999;
+    transition : all 0.3s ease 0s;
+    padding:1px;
+    font-weight: bold;
+  }
+  
+a:hover {
+    color: #ddd;
 }
