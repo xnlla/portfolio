@@ -8,10 +8,10 @@ html {
   
 body {
     margin: 0px;
-    line-height: 1.1;
-    background-image: url(/header.png);
+    line-height: 1.5;
+    /* background-image: url(/header.png);
     background-size: 100%, 100%;
-    background-repeat: no-repeat, no-repeat;
+    background-repeat: no-repeat, no-repeat; */
 }
 
 .contents {
