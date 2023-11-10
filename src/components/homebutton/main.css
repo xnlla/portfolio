@@ -1,10 +1,16 @@
 @charset "utf-8";
 
 .home img {
-    margin: 20px 0px 5px 0px;
-    transform: scale(1.0);
-    transition: .2s ease-in-out;
+    
+    transition: .1s ease-out;
     height: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    bottom: 5%;
+    transform: scale(1.0) ;
+    z-index: 100;
 }
 .home img:hover {
     transform: scale(1.2);
