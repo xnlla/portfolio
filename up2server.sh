@@ -27,6 +27,7 @@ for d in `find . -type d`;do
     done 
 done
 echo put ../.htaccess >> $FILELIST
+echo put ../robots.txt >> $FILELIST
 
 ftp -p $PAAS_URL < $FILELIST
 rm -f $FILELIST
