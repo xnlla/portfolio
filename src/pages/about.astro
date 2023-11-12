@@ -7,59 +7,75 @@ import img_about from '../images/computing.png';
 
 ---
 <style>
-
-    .big-text{
-        font-size: 3.7vmin;
-    }
-
-    .text {
-        text-shadow:
-        1px 1px 1px #fff,
-        -1px 1px 1px #fff,
-        1px -1px 1px #fff,
-        -1px -1px 1px #fff,
-        2px 2px 1px #fff,
-        -2px 2px 1px #fff,
-        -2px -2px 1px #fff,
-        2px -2px 1px #fff,
-        3px 3px 1px #fff,
-        -3px 3px 1px #fff,
-        -3px -3px 1px #fff,
-        3px -3px 1px #fff;
-
+    .contents-cover {
+        max-width: 1000px;
         position: absolute;
-        top: 50px;
+        top: 0;
+        bottom: 0;
+        left: 0;
         right: 0;
-        height: auto;
-        width: 50%;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        
+    }
+    .contents-big-text{
+        font-size: 9vmin;
+        font-weight: bold;
+    }
+    .contents-small-text {
+        font-size: 4vmin;
+        position: relative;
+        left: 10%;
+    }
+    .contents-text {
+        position: absolute;
+        top: 20px;
+        right: 5%;
+        /* width: 50%; */
         min-width: 220px;
-        font-size: 2.5vmin;
+        font-size: 5vmin;
         text-align: left;
         z-index: 10;
     }
-    .image {
-        top: auto;
+    .contents-image {
+        bottom: 10%;
         left: 0;
         position: absolute;
-        margin-left: -25px;
+        margin-left: -30px;
         width: 100%;
-        max-width:600px;
-        bottom: 13%;
+        max-width:650px;
         z-index: 0;
+    }
+    .contents-text-block {
+        background-color: #fff;
     }
 
 </style>
 <BaseLayout pageTitle={pageTitle}, page_url={url}>
-        <img src={img_about.src} alt="" class="image" />
-        <div class="text">
-            <p><div class="big-text">突然Webサイトを<br />作りたくりました。</div><p/>
-            <p>今後コンテンツを増やしていけたら<br />いいな...と思っています。</p>
+    <div class="contents-cover">
+        <img src={img_about.src} alt="" class="contents-image" />
+        <div class="contents-text">
+            <div class="contents-big-text">
+                <span class="contents-text-block">
+                    突然Webサイトを<br />
+                    作りたくなった。
+                </span>
+            </div>
             <p>
-                <a href="https://astro.build/">astro</a>でプログラミングされました。<br />
-                <a href="https://lolipop.jp/">ロリポップ</a>のエコノミープランです。<br />
-                <a href="https://github.com/nkte8/portfolio">ソースコード</a>を公開しています。<br />
+                <span class="contents-text-block">
+                    今後コンテンツを増やしていけたら<br />いいな...と思っています。
+                </span>
             </p>
+            <div class="contents-small-text">
+                <p><span class="contents-text-block">
+                    <a href="https://astro.build/">astro</a>でプログラミングされました。<br />
+                    <a href="https://lolipop.jp/">ロリポップ</a>のエコノミープランです。<br />
+                    <a href="https://github.com/nkte8/portfolio">ソースコード</a>を公開しています。<br />
+                </span>
+                </p>
+            </div>
         </div>
-        
+    </div>
 
 </BaseLayout>
