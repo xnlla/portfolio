@@ -1,13 +1,12 @@
 ---
-import '../styles/portfolio.css';
 import Footer from '../components/footer/main.astro';
 import Homebutton from '../components/homebutton/main.astro';
 
 const base_url = import.meta.env.SITE
-const { pageTitle, homebutton_hidden, page_url } = Astro.props;
+const { pageTitle, homebutton_hidden, page_url, card_file} = Astro.props;
 
 const url = base_url + page_url
-const card_url = base_url + "/card.png"
+const card_url = base_url + card_file
 ---
 
 <html lang="en">
@@ -39,10 +38,8 @@ const card_url = base_url + "/card.png"
     </script>
   </head>
   <body>
-    <div class="contents">
-      <slot />
-      <Homebutton homebutton_hidden={homebutton_hidden}/>
-      <Footer />
-    </div>
+    <slot />
+    <Homebutton homebutton_hidden={homebutton_hidden}/>
+    <Footer />
   </body>
 </html>

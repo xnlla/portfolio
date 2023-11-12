@@ -6,11 +6,25 @@ import Socialbutton from '../components/socialbutton/main.astro';
 import Menubutton from '../components/menu/main.astro';
 
 import { Image } from 'astro:assets';
-import img_site from '../images/site.png';
+import img_site from './images/site.png';
 const homebutton_hidden = true;
+const card_name = "/cards/main.png"
 ---
+
+<style>
+    .index-front img {
+        max-width: 95%;
+        height: auto;
+    }
+    .index-center {
+        text-align: center;
+        margin: 0px;
+    }
+</style>
 <BaseLayout pageTitle={pageTitle}, homebutton_hidden={homebutton_hidden}, page_url={url}>
-    <p class="front"><Image src={img_site} alt="hello world" /></p>
-    <Menubutton />
-    <Socialbutton />
+    <div class="index-center">
+        <p class="index-front"><Image src={img_site} alt="hello world" /></p>
+        <Menubutton />
+        <Socialbutton />
+    </div>
 </BaseLayout>

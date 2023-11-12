@@ -1,10 +1,12 @@
 ---
+import '../styles/myshape.css';
+
 import BaseLayout from '../layouts/PortfolioLayout.astro';
-const pageTitle = "ㅤ - about";
+const pageTitle = "about";
 const url="/about"
 
-import img_about from '../images/computing.png';
-
+import img_about from './images/computing.png';
+const card_name = "/cards/main.png"
 ---
 <style>
     .contents-cover {
@@ -16,8 +18,7 @@ import img_about from '../images/computing.png';
         right: 0;
         margin: auto;
         height: 100%;
-        width: 100%;
-        
+        width: 100%;  
     }
     .contents-big-text{
         font-size: 9vmin;
@@ -32,7 +33,6 @@ import img_about from '../images/computing.png';
         position: absolute;
         top: 20px;
         right: 5%;
-        /* width: 50%; */
         min-width: 220px;
         font-size: 5vmin;
         text-align: left;
@@ -52,7 +52,7 @@ import img_about from '../images/computing.png';
     }
 
 </style>
-<BaseLayout pageTitle={pageTitle}, page_url={url}>
+<BaseLayout pageTitle={pageTitle}, page_url={url}, card_name={card_name}>
     <div class="contents-cover">
         <img src={img_about.src} alt="" class="contents-image" />
         <div class="contents-text">
