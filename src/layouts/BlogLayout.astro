@@ -1,0 +1,12 @@
+---
+import '../styles/blog.css';
+
+import BaseLayout from './/PortfolioLayout_noheader.astro';
+import Header from '../components/header/main.astro';
+const { pageTitle, pageTags, pageTimestamp, pageUrl } = Astro.props;
+---
+<BaseLayout 
+    pageTitle={pageTitle},
+    page_url={pageUrl}>
+    <slot />
+</BaseLayout>

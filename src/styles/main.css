@@ -1,28 +1,11 @@
-@font-face {
-    font-family: "myfont";
-    src: url('/myfont.ttf');
-}
-
 html {
     /* background: linear-gradient(#fff 50%, #e5e5e5 75%, #dfdfdf); */
     background-color: #fff;
-    font-family: myfont;
-    /* height: 100%; */
-    font-size: 15px;
 }
   
 body {
     margin: 0px;
-    line-height: 1.3;
     color: #222;
-    /* background-image: url(/header.png);
-    background-size: 100%, 100%;
-    background-repeat: no-repeat, no-repeat; */
-}
-
-.contents {
-    text-align: center;
-    margin: 0px;
 }
 
 .front img {
