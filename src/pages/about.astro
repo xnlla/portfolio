@@ -3,13 +3,79 @@ import BaseLayout from '../layouts/PortfolioLayout.astro';
 const pageTitle = "ㅤ - about";
 const url="/about"
 
+import img_about from '../images/computing.png';
+
 ---
+<style>
+    .contents-cover {
+        max-width: 1000px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        
+    }
+    .contents-big-text{
+        font-size: 9vmin;
+        font-weight: bold;
+    }
+    .contents-small-text {
+        font-size: 4vmin;
+        position: relative;
+        left: 10%;
+    }
+    .contents-text {
+        position: absolute;
+        top: 20px;
+        right: 5%;
+        /* width: 50%; */
+        min-width: 220px;
+        font-size: 5vmin;
+        text-align: left;
+        z-index: 10;
+    }
+    .contents-image {
+        bottom: 10%;
+        left: 0;
+        position: absolute;
+        margin-left: -30px;
+        width: 100%;
+        max-width:650px;
+        z-index: 0;
+    }
+    .contents-text-block {
+        background-color: #fff;
+    }
+
+</style>
 <BaseLayout pageTitle={pageTitle}, page_url={url}>
-    <p>突然Webサイトを作りたくなって生まれました。<p/>
-    <p>今後コンテンツを増やしていけたらいいな...と思っています。</p>
-    <p>
-        <br><a href="https://astro.build/">astro</a>でプログラミングされました。</br>
-        <br><a href="https://lolipop.jp/">ロリポップレンタルサーバ</a>のエコノミープランで運用中です。</br>
-        <br><a href="https://github.com/nkte8/portfolio">ソースコード</a>を公開しています。</br>  
-    </p>
+    <div class="contents-cover">
+        <img src={img_about.src} alt="" class="contents-image" />
+        <div class="contents-text">
+            <div class="contents-big-text">
+                <span class="contents-text-block">
+                    突然Webサイトを<br />
+                    作りたくなった。
+                </span>
+            </div>
+            <p>
+                <span class="contents-text-block">
+                    今後コンテンツを増やしていけたら<br />いいな...と思っています。
+                </span>
+            </p>
+            <div class="contents-small-text">
+                <p><span class="contents-text-block">
+                    <a href="https://astro.build/">astro</a>でプログラミングされました。<br />
+                    <a href="https://lolipop.jp/">ロリポップ</a>のエコノミープランです。<br />
+                    <a href="https://github.com/nkte8/portfolio">ソースコード</a>を公開しています。<br />
+                </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
 </BaseLayout>

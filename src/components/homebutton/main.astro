@@ -8,7 +8,5 @@ import './main.css';
 const { homebutton_hidden } = Astro.props;
 ---
 {!homebutton_hidden &&
-    <p class="home">
-        <a href="/"><img src="/home.png" alt="home" /></a>
-    </p>
+    <a href="/" class="home" ><img src="/home.png" alt="home"/></a>
 }
