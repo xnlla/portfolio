@@ -16,6 +16,9 @@ npm run dev
 
 ロリポップftpサーバへのアップロード
 ```
+# ローカルwebサーバへのデプロイ確認
+./up2local.sh
+
 # .netrc でレンタルサーバへアクセスする情報が記載されていること
-./upload.sh
+./up2server.sh
 ```
