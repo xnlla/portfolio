@@ -7,7 +7,7 @@ import partytown from "@astrojs/partytown";
 // https://astro.build/config
 export default defineConfig({
     outDir: './docs',
-    site: 'https://184.moo.jp',
+    site: 'https://na74.net',
     // integrations: [relativeLinks()]
     integrations: [
         partytown({
