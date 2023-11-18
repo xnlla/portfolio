@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "shape01";
+    src: url('/shape01.ttf');
+}
+
+html {
+    font-family: shape01;
+    font-size: 15px;
+    line-height: 1.3;
+}
