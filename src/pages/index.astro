@@ -21,7 +21,11 @@ const card_name = "/cards/main.png"
         margin: 0px;
     }
 </style>
-<BaseLayout pageTitle={pageTitle}, homebutton_hidden={homebutton_hidden}, page_url={url}>
+<BaseLayout 
+    pageTitle={pageTitle}, 
+    homebutton_hidden={homebutton_hidden}, 
+    page_url={url}, card_file={card_name}>
+
     <div class="index-center">
         <p class="index-front"><Image src={img_site} alt="hello world" /></p>
         <Menubutton />
