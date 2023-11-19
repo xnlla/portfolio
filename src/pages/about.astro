@@ -2,7 +2,7 @@
 import '../styles/shape01.css';
 
 import BaseLayout from '../layouts/PortfolioLayout.astro';
-const pageTitle = "about";
+const pageTitle = Astro.url.pathname;
 const url="/about"
 
 import img_about from './images/computing.png';
