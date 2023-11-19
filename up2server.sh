@@ -1,7 +1,5 @@
 #!/bin/bash
 cd $(dirname $0)
-git branch --contains | grep main
-[[ $? -ne 0 ]] && echo "mainブランチでのみ実行が許可されます。" && exit 1;
 
 FILELIST=$(pwd)/putlist
 PAAS_URL=ftp.lolipop.jp
@@ -29,6 +27,13 @@ done
 echo put ../.htaccess >> $FILELIST
 echo put ../robots.txt >> $FILELIST
 
+git branch --contains | grep main
+if [[ $? -ne 0 ]];then
+    echo "mainブランチでのみ実行が許可されます。"
+    read -p "Enter to exit."
+    rm -f $FILELIST 
+    exit 1;
+fi
 ftp -p $PAAS_URL < $FILELIST
 rm -f $FILELIST
 

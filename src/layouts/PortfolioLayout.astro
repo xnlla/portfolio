@@ -1,12 +1,16 @@
 ---
-import BaseLayout from '../layouts/PortfolioLayout_noheader.astro';
+import '../styles/main.css';
 
+import BaseLayout from './PortfolioLayout_noheader.astro';
 import Header from '../components/header/main.astro';
-
-const { pageTitle, homebutton_hidden, page_url } = Astro.props;
+const { pageTitle, homebutton_hidden, page_url, card_file } = Astro.props;
 ---
 
-<BaseLayout pageTitle={pageTitle} homebutton_hidden={homebutton_hidden} page_url={page_url}>
+<BaseLayout pageTitle={pageTitle},
+  homebutton_hidden={homebutton_hidden},
+  page_url={page_url},
+  card_file={card_file}>
+
   <Header />
   <slot />
 </BaseLayout>
