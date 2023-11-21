@@ -1,4 +1,7 @@
 ErrorDocument 404 /404.html
+RewriteEngine On
+RewriteCond %{http_host} ^184.moo.jp
+RewriteRule ^(.*) https://unnamedworks.com/$1 [R=301,L]
 Header always append X-Frame-Options SAMEORIGIN
 deny from 46.166.136.0/21
 deny from 78.46.0.0/15
