@@ -1,40 +1,31 @@
 #!/bin/bash
 cd $(dirname $0)
-
-FILELIST=$(pwd)/putlist
-PAAS_URL=ftp.lolipop.jp
-
-cd $(dirname $0)/docs
-# settings at .netrc
-
-# create filelist
-echo "binary" > $FILELIST
-echo "prompt" >> $FILELIST
-
-# 二階層までのファイルを全て削除
-# 空のディレクトリの処理は出来ないため、あくまでアップロードがメイン
-echo "mdel */*" >> $FILELIST
-echo "mdel *" >> $FILELIST
-
-for d in `find . -type d`;do
-    if [[ $d != "." ]];then
-        echo mkdir $d >> $FILELIST;
-    fi
-    for f in `find $d -maxdepth 1 -type f`;do
-        echo put $f >> $FILELIST;
-    done 
-done
-echo put ../.htaccess >> $FILELIST
-echo put ../robots.txt >> $FILELIST
-
-git branch --contains | grep main
-if [[ $? -ne 0 ]];then
-    echo "mainブランチでのみ実行が許可されます。"
-    read -p "Enter to exit."
-    rm -f $FILELIST 
+if [[ ! -e .env ]];then
+    echo "ERROR: create .env file."
     exit 1;
 fi
-ftp -p $PAAS_URL < $FILELIST
-rm -f $FILELIST
+source ./.env
+
+git branch --contains | grep main >/dev/null
+if [[ $? -ne 0 ]];then
+    echo "ERROR: here is no main branch."
+    exit 1;
+fi
+
+# 再帰削除/アップロードにlftpを利用する
+# オープンソースウェアだから信頼性はあるはず https://github.com/lavv17/lftp
+apt list --installed 2>/dev/null | grep lftp >/dev/null
+[[ $? -ne 0 ]] && sudo apt-get install lftp -y
+lftp --version | head -1
+
+lftp -u ${FTP_USER},${FTP_PASS} $FTP_URL << EOF
+rm -rf ./${FTP_DIRECTORY}
+mkdir ./${FTP_DIRECTORY}
+cd ./${FTP_DIRECTORY}
+put ./.htaccess
+put ./robots.txt 
+lcd ./docs
+mirror -R
+EOF
 
 echo "Complete."

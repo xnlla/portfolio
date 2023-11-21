@@ -14,11 +14,14 @@ docker run --rm -v $PWD:/src -w /src -u `id -u`:`id -g` -p 80:4321 -it node:lts 
 npm run dev
 ```
 
-ロリポップftpサーバへのアップロード
-```
-# ローカルwebサーバへのデプロイ確認
-./up2local.sh
+## サーバへのアップロード
 
-# .netrc でレンタルサーバへアクセスする情報が記載されていること
+ローカルwebサーバへのデプロイ  
+```sh
+./up2local.sh
+```
+
+ftpサーバへのアップロード
+```sh
 ./up2server.sh
 ```
