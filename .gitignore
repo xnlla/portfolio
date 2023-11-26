@@ -23,3 +23,5 @@ pnpm-debug.log*
 
 # .htaccess
 .htaccess
+# robots.txt
+robots.txt
