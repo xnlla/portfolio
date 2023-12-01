@@ -9,17 +9,6 @@ import img_about from './images/computing.png';
 const card_name = "/cards/main.png"
 ---
 <style>
-    .contents-cover {
-        max-width: 1100px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        height: 100%;
-        width: 100%;  
-    }
     .contents-big-text{
         font-size: 9vmin;
         font-weight: bold;
@@ -53,29 +42,26 @@ const card_name = "/cards/main.png"
 
 </style>
 <BaseLayout pageTitle={pageTitle}, page_url={url}, card_file={card_name}>
-    <div class="contents-cover">
-        <img src={img_about.src} alt="" class="contents-image" />
-        <div class="contents-text">
-            <div class="contents-big-text">
-                <span class="contents-text-block">
-                    突然Webサイトを<br />
-                    作りたくなった。
-                </span>
-            </div>
-            <p>
-                <span class="contents-text-block">
-                    今後コンテンツを増やしていけたら<br />いいな...と思っています。
-                </span>
+    <img src={img_about.src} alt="" class="contents-image" />
+    <div class="contents-text">
+        <div class="contents-big-text">
+            <span class="contents-text-block">
+                突然Webサイトを<br />
+                作りたくなった。
+            </span>
+        </div>
+        <p>
+            <span class="contents-text-block">
+                今後コンテンツを増やしていけたら<br />いいな...と思っています。
+            </span>
+        </p>
+        <div class="contents-small-text">
+            <p><span class="contents-text-block">
+                <a href="https://astro.build/">astro</a>でプログラミングされました。<br />
+                <a href="https://lolipop.jp/">ロリポップ</a>のエコノミープランです。<br />
+                <a href="https://github.com/nkte8/unnamed-portfolio">ソースコード</a>を公開しています。<br />
+            </span>
             </p>
-            <div class="contents-small-text">
-                <p><span class="contents-text-block">
-                    <a href="https://astro.build/">astro</a>でプログラミングされました。<br />
-                    <a href="https://lolipop.jp/">ロリポップ</a>のエコノミープランです。<br />
-                    <a href="https://github.com/nkte8/unnamed-portfolio">ソースコード</a>を公開しています。<br />
-                </span>
-                </p>
-            </div>
         </div>
     </div>
-
 </BaseLayout>
