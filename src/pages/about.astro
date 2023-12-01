@@ -9,17 +9,6 @@ import img_about from './images/computing.png';
 const card_name = "/cards/main.png"
 ---
 <style>
-    .contents-cover {
-        max-width: 1100px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        height: 100%;
-        width: 100%;  
-    }
     .contents-big-text{
         font-size: 9vmin;
         font-weight: bold;
@@ -30,19 +19,20 @@ const card_name = "/cards/main.png"
         left: 10%;
     }
     .contents-text {
-        position: absolute;
         top: 25px;
         right: 5%;
-        min-width: 220px;
-        font-size: 5vmin;
+        font-size: 4.8vmin;
         text-align: left;
         z-index: 10;
+        margin-left: 40%;
+        position: relative;
+        width: 70%;
     }
     .contents-image {
         bottom: 10%;
         left: 0;
-        position: absolute;
         margin-left: -30px;
+        margin-top: -30%;
         width: 100%;
         max-width:650px;
         z-index: 0;
@@ -53,8 +43,6 @@ const card_name = "/cards/main.png"
 
 </style>
 <BaseLayout pageTitle={pageTitle}, page_url={url}, card_file={card_name}>
-    <div class="contents-cover">
-        <img src={img_about.src} alt="" class="contents-image" />
         <div class="contents-text">
             <div class="contents-big-text">
                 <span class="contents-text-block">
@@ -76,6 +64,6 @@ const card_name = "/cards/main.png"
                 </p>
             </div>
         </div>
-    </div>
+        <img src={img_about.src} alt="" class="contents-image" />
 
 </BaseLayout>

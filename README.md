@@ -1,5 +1,4 @@
-# README.md
-
+README.md
 # 管理方法  
 
 ## astroの実行方法
@@ -24,12 +23,19 @@ npm run build
 
 ## サーバへのアップロード方法
 
+`.env`を`.env.template`を参考に作成。
+
 ローカルwebサーバへのデプロイ  
 ```sh
-./up2local.sh
+./up_localserver.sh
 ```
 
 ftpサーバへのアップロード
 ```sh
-./up2server.sh
+./up_remoteserver.sh
+```
+
+ftpサーバを再デプロイ
+```sh
+./reset_server.sh
 ```
