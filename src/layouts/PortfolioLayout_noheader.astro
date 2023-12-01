@@ -10,10 +10,10 @@ const { pageTitle, homebutton_hidden, page_url, card_file} = Astro.props;
   <Metadatas pageTitle={pageTitle}, page_url={page_url}, card_file={card_file} />
   <body>
     <slot name="header"/>
-        <div class="contents-cover">
-          <slot />
-          <Homebutton homebutton_hidden={homebutton_hidden}/>
-          <Footer />
-        </div>
+      <div class="contents-cover">
+        <slot />
+        <Homebutton homebutton_hidden={homebutton_hidden}/>
+        <Footer />
+      </div>
   </body>
 </html>
