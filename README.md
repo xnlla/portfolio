@@ -21,21 +21,6 @@ npm run dev
 npm run build
 ```
 
-## サーバへのアップロード方法
+## デプロイ方法
 
-`.env`を`.env.template`を参考に作成。
-
-ローカルwebサーバへのデプロイ  
-```sh
-./up_localserver.sh
-```
-
-ftpサーバへのアップロード
-```sh
-./up_remoteserver.sh
-```
-
-ftpサーバを再デプロイ
-```sh
-./reset_server.sh
-```
+Cloudflareで自動でビルドされるため、サーバへのアップロードは不要になった。
