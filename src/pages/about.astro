@@ -1,32 +1,34 @@
 ---
-import '../styles/shape01.css';
+import '@/styles/shape01.css';
 
-import BaseLayout from '../layouts/PortfolioLayout.astro';
+import BaseLayout from '@/layouts/PortfolioLayout.astro';
 const pageTitle = "about";
 const url = Astro.url.pathname;
 
 import img_about from './images/computing.png';
 const card_name = "/cards/main.png"
+
+import Passedyears from '@/components/getpassedyear/main.tsx'
 ---
 <style>
     .contents-big-text{
         font-size: 9vmin;
-        font-weight: bold;
+        
     }
     .contents-small-text {
         font-size: 4vmin;
         position: relative;
-        left: 10%;
+        left: 9.5%;
     }
     .contents-text {
         top: 25px;
-        right: 5%;
+        right: 6%;
         font-size: 4.8vmin;
         text-align: left;
         z-index: 10;
         margin-left: 35%;
         position: relative;
-        width: 65%;
+        width: 67%;
     }
     .contents-image {
         bottom: 10%;
@@ -46,13 +48,14 @@ const card_name = "/cards/main.png"
         <div class="contents-text">
             <div class="contents-big-text">
                 <span class="contents-text-block">
-                    突然Webサイトを<br />
-                    作りたくなった。
+                    名前がきまらず<br />
+                    約<Passedyears client:load from="2020-11-18" />年経ちました。
                 </span>
             </div>
             <p>
                 <span class="contents-text-block">
-                    今後コンテンツを増やしていけたら<br />いいな...と思っています。
+                    どうぞよろしくおねがいします。<br />
+                    メインコンテンツは<a href="https://unnamedworks.com/">こちら</a>です。
                 </span>
             </p>
             <div class="contents-small-text">
@@ -60,7 +63,7 @@ const card_name = "/cards/main.png"
                     <a href="https://astro.build/">astro</a>でプログラミングされました。<br />
                     <a href="https://www.cloudflare.com/ja-jp/developer-platform/pages/">
                         Cloudflare Pages</a>でデプロイされました。<br />
-                    <a href="https://github.com/nkte8/unnamed-portfolio">ソースコード</a>を公開しています。<br />
+                    <a href="https://github.com/nkte8/portfolio">ソースコード</a>を公開しています。<br />
                 </span>
                 </p>
             </div>

@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../layouts/PortfolioLayout.astro';
+import BaseLayout from '@/layouts/PortfolioLayout.astro';
 const pageTitle = "ㅤ";
 const url = Astro.url.pathname;
-import Socialbutton from '../components/socialbutton/main.astro';
-import Menubutton from '../components/menu/main.astro';
+import Socialbutton from '@/components/socialbutton/main.astro';
+import Menubutton from '@/components/menu/main.astro';
 
 import { Image } from 'astro:assets';
 import img_site from './images/site.png';
@@ -27,7 +27,7 @@ const card_name = "/cards/main.png"
     page_url={url}, card_file={card_name}>
 
     <div class="index-center">
-        <p class="index-front"><Image src={img_site} alt="hello world" /></p>
+        <p class="index-front"><Image src={img_site} alt="hello!" /></p>
         <Menubutton />
         <Socialbutton />
     </div>
