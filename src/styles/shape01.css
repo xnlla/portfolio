@@ -1,6 +1,7 @@
 @font-face {
     font-family: "shape01";
-    src: url('/materials/shape01.ttf');
+    src: url('/materials/shape01.woff2');
+    font-display: block;
 }
 
 html {
