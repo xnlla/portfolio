@@ -8,7 +8,7 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   outDir: './docs',
-  site: 'https://vvou.uk/',
+  site: 'https://un.narned.com/',
   server: {
     port: 4321,
     host: true
