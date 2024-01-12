@@ -1,33 +1,34 @@
 ---
-import BaseLayout from '@/layouts/PortfolioLayout.astro';
+import BaseLayout from "@/layouts/PortfolioLayout.astro";
 const pageTitle = "ㅤ";
 const url = Astro.url.pathname;
-import Socialbutton from '@/components/socialbutton/main.astro';
-import Menubutton from '@/components/menu/main.astro';
+import Socialbutton from "@/components/socialbutton/main.astro";
+import Menubutton from "@/components/menu/main.astro";
 
-import { Image } from 'astro:assets';
-import img_site from './images/site.png';
+import { Picture } from "astro:assets";
+import img_site from "./images/site.png";
 const homebutton_hidden = true;
-const card_name = "/cards/main.png"
+const card_name = "/cards/main.png";
+
+import "@/styles/shape02.css"
 ---
 
 <style>
-    .index-front img {
-        max-width: 95%;
-        height: auto;
+    .shape02 {
+        font-size:3vmin;
     }
-    .index-center {
-        text-align: center;
-        margin: 0px;
+    img {
+        width: 95%;
     }
 </style>
-<BaseLayout 
-    pageTitle={pageTitle}, 
-    homebutton_hidden={homebutton_hidden}, 
-    page_url={url}, card_file={card_name}>
-
-    <div class="index-center">
-        <p class="index-front"><Image src={img_site} alt="hello!" /></p>
+<BaseLayout
+    pageTitle={pageTitle}
+    homebutton_hidden={homebutton_hidden}
+    page_url={url}
+    card_file={card_name}
+>
+    <div class="shape02">
+        <Picture src={img_site} alt="hello!" />
         <Menubutton />
         <Socialbutton />
     </div>

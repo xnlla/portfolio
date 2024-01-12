@@ -1,51 +1,42 @@
 ---
-import "@/styles/shape01.css";
+import "@/styles/shape02.css";
 
 import BaseLayout from "@/layouts/PortfolioLayout.astro";
-const pageTitle = "about";
+const pageTitle = "unnamedworks";
 const url = Astro.url.pathname;
 
 const card_name = "/cards/main.png";
 import { Picture } from "astro:assets";
-import img_site from "./images/computing.png";
-
-import Passedyears from "@/components/getpassedyear/main.tsx";
+import img_site from "./images/unnamedworks.png";
 ---
 
 <style>
     .parent {
         position: relative;
-        aspect-ratio: 11/9;
-        width: 100%;
-        height: auto;
     }
     .parent_textarea {
         position: absolute;
-        top: 1%;
-        left: 35%;
         text-align: left;
-        width: 65%;
-        height: 60%;
-        z-index: 1;
+        top: 65%;
+        left: 45%;
+        width: 50%;
+        height: 35%;
     }
     .title {
         position: absolute;
-        font-size: 8.5vmin;
-        top: 7%;
+        font-size: 5vmin;
     }
     .description {
         position: absolute;
-        font-size: 5.5vmin;
-        top: 50%;
-        left: 9%;
+        font-size: 3vmin;
+        top: 20%;
     }
     .detail {
         position: absolute;
-        font-size: 3.5vmin;
-        top: 70%;
+        font-size: 2.2vmin;
+        top: 33%;
         left: 10%;
     }
-
     .parent_textarea div {
         padding: 1%;
         line-height: 1.5em;
@@ -63,33 +54,21 @@ import Passedyears from "@/components/getpassedyear/main.tsx";
         left: -5px;
         z-index: -1;
     }
-    .picture {
-        position: absolute;
-        bottom: -5%;
-        width: 65%;
-        z-index: 0;
-    }
     p {
         margin: 0;
-        line-height: 1.2;
     }
 </style>
 <BaseLayout pageTitle={pageTitle} , page_url={url} , card_file={card_name}>
-    <div class="parent shape01">
+    <div class="parent shape02">
         <div class="parent_textarea">
             <div class="title">
-                <p>名前がきまらず</p>
-                <p>
-                    約<Passedyears
-                        client:load
-                        from="2020-11-18"
-                    />年経ちました。
-                </p>
+                <a href="https://unnamedworks.com/"> unnamedworks.com</a>
             </div>
-            <div class="description">よろしくおねがいします。</div>
+            <div class="description">ー 趣味のブログです。</div>
             <div class="detail">
                 <p>
-                    <a href="https://astro.build/">astro</a
+                    <a href="https://astro.build/">
+                        Astro</a
                     >でプログラミングされました。
                 </p>
                 <p>
@@ -97,15 +76,23 @@ import Passedyears from "@/components/getpassedyear/main.tsx";
                         href="https://www.cloudflare.com/ja-jp/developer-platform/pages/"
                     >
                         Cloudflare Pages</a
-                    >でデプロイされました。
+                    >
+                     でデプロイされました。
                 </p>
                 <p>
-                    <a href="https://github.com/nkte8/portfolio">ソースコード</a
-                    >を公開しています。
+                    <a href="https://www.newt.so/">newt</a>で管理されています。
+                </p>
+                <p>
+                    裏で<a href="https://aws.amazon.com/jp/">AWS</a>が動いています。
+                </p>
+                <p>
+                    <a href="https://github.com/nkte8/unnamedworks">
+                        ソースコード</a
+                    >
+                     を公開しています。
                 </p>
             </div>
         </div>
-
-        <div class="picture"><Picture src={img_site} alt="about" /></div>
+        <div class="picture"><Picture src={img_site} alt="unnamedworks" /></div>
     </div>
 </BaseLayout>
