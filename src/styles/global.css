@@ -1,26 +1,24 @@
 html {
-    /* background: linear-gradient(#fff 50%, #e5e5e5 75%, #dfdfdf); */
     background-color: #fff;
 }
-  
+
 body {
     margin: 0px;
     color: #222;
 }
 
-.front img {
-    max-width: 95%;
-    height: auto;
+div {
+    margin: 0% 0% 1em 0%;
 }
 
 a,a:visited {
     text-decoration: none;
     color: #e88;
-    transition : all 0.2s ease 0s;
-    padding:1px;
+    transition: all 0.2s ease 0s;
+    padding: 1px;
     font-weight: bold;
-  }
-  
+}
+
 a:hover {
     color: #f00;
 }
@@ -29,6 +27,12 @@ a:hover {
     max-width: 1100px;
     margin: auto;
     height: 100%;
-    width: 100%;  
+    width: 100%;
     overflow: hidden;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

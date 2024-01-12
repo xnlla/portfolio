@@ -1,9 +1,23 @@
 ---
-import './main.css';
-import img_footer from './footer.png';
-
+import img_footer from "./footer.png";
 ---
-<p class="footer">
+
+<style>
+    .footer {
+        margin: auto;
+        text-align: center;
+        line-height: 1.2;
+        font-size: 12px;
+        color: #999;
+    }
+
+    .footer img {
+        width: 50%;
+        max-width: 350px;
+        margin-bottom: 3%;
+    }
+</style>
+<div class="footer">
     <!-- Copyright © @Il_______l all rights received. -->
-    <img src={img_footer.src} alt="this site is managed by @Il_______l">
-</p>
+    <img src={img_footer.src} alt="this site is managed by @Il_______l" />
+</div>
