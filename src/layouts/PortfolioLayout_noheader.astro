@@ -1,5 +1,5 @@
 ---
-import "@/styles/global.css"
+import "@/styles/global.css";
 import Footer from "../components/footer/main.astro";
 import Homebutton from "../components/homebutton/main.astro";
 import Metadatas from "../components/Metadatas.astro";
@@ -8,7 +8,13 @@ const { pageTitle, homebutton_hidden, page_url, card_file } = Astro.props;
 ---
 
 <html lang="ja">
-  <Metadatas pageTitle={pageTitle} page_url={page_url} card_file={card_file} />
+  <head prefix="og: https://ogp.me/ns#">
+    <Metadatas
+      pageTitle={pageTitle}
+      page_url={page_url}
+      card_file={card_file}
+    />
+  </head>
   <body>
     <slot name="header" />
     <div class="contents-cover">
