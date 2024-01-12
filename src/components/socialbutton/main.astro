@@ -1,39 +1,49 @@
 ---
-import './main.css';
-import { Image } from 'astro:assets';
-import img_bluesky from './icons/bluesky.png';
-import img_twitter from './icons/twitter.png';
-import img_instagram from './icons/instagram.png';
-import img_pixiv from './icons//pixiv.png';
-import img_zenn from './icons/zenn.png';
-import img_github from './icons/github.png';
+import { Image } from "astro:assets";
+import img_bluesky from "./icons/bluesky.png";
+import img_twitter from "./icons/twitter.png";
+import img_instagram from "./icons/instagram.png";
+import img_pixiv from "./icons//pixiv.png";
+import img_zenn from "./icons/zenn.png";
+import img_github from "./icons/github.png";
+import img_mail from "./icons/mail.png";
 
 const links = [
-    {   src: img_bluesky,
-        alt: "bluesky",
-        link: "https://bsky.nlla.uk/"},
-    {   src: img_twitter,
-        alt: "X",
-        link: "https://twitter.com/Il_______l"},
-    {   src: img_instagram,
+    { src: img_bluesky, alt: "bluesky", link: "https://bsky.nlla.uk/" },
+    { src: img_twitter, alt: "X", link: "https://twitter.com/Il_______l" },
+    {
+        src: img_instagram,
         alt: "instagram",
-        link: "https://www.instagram.com/l._________l/"},
-    {   src: img_pixiv,
+        link: "https://www.instagram.com/l._________l/",
+    },
+    {
+        src: img_pixiv,
         alt: "pixiv",
-        link: "https://www.pixiv.net/users/61472849"},
-    {   src: img_zenn,
-        alt: "zenn",
-        link: "https://zenn.dev/nkte8"},
-    {   src: img_github,
-        alt: "github",
-        link: "https://github.com/nkte8"},
-]
-
+        link: "https://www.pixiv.net/users/61472849",
+    },
+    { src: img_zenn, alt: "zenn", link: "https://zenn.dev/nkte8" },
+    { src: img_github, alt: "github", link: "https://github.com/nkte8" },
+    { src: img_mail, alt: "mail", link: "mailto: mail@unnamedworks.com" },
+];
 ---
-<p class="social">
-    {links.map((item) => 
-        <a href={item.link}>
-            <Image src={item.src} alt={item.alt} height="50"/>
-        </a>
-    )}
-</p>
+
+<style>
+    .social img {
+        transform: scale(1);
+        transition: 0.1s ease-out;
+        /* height: 50px;
+    width: auto; */
+    }
+    .social img:hover {
+        transform: scale(1.2);
+    }
+</style>
+<div class="social">
+    {
+        links.map((item) => (
+            <a href={item.link}>
+                <Image src={item.src} alt={item.alt} height="50" />
+            </a>
+        ))
+    }
+</div>

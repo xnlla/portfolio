@@ -1,9 +1,27 @@
 ---
-import './main.css';
 // import { Image } from 'astro:assets';
-import img_header from './header.png';
-
+import img_header from "./header.png";
 ---
+
+<style>
+    .header {
+        padding: 0;
+        margin: 10;
+        position: static;
+        top: 0px;
+        left: 0px;
+        height: 20px;
+    }
+
+    .header img {
+        width: 100%;
+        background-size: 100%, 100%;
+        background-repeat: no-repeat, no-repeat;
+        position: static;
+        top: 0px;
+        z-index: 100;
+    }
+</style>
 <div class="header">
-    <img src={img_header.src} alt=""/>
+    <img src={img_header.src} alt="" />
 </div>
