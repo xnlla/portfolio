@@ -1,6 +1,4 @@
 ---
-import './main.css';
-
 // import { Image } from 'astro:assets';
 // const base_url = import.meta.env.SITE;
 // const img_home_url = base_url + "/home.png";
@@ -8,8 +6,24 @@ import './main.css';
 const { homebutton_hidden } = Astro.props;
 ---
 
-{!homebutton_hidden &&
-    <p style="text-align: center;">
-        <a href="/" class="home" ><img src="/materials/home.png" alt="home"/></a>
-    </p>
+<style>
+    .home img {
+        transition: 0.1s ease-out;
+        height: 50px;
+        margin: auto;
+        transform: scale(1);
+        z-index: 100;
+    }
+    .home img:hover {
+        transform: scale(1.2);
+    }
+</style>
+{
+    !homebutton_hidden && (
+        <p style="text-align: center;">
+            <a href="/" class="home">
+                <img src="/materials/home.png" alt="home" />
+            </a>
+        </p>
+    )
 }

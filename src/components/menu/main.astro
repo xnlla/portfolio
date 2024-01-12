@@ -1,24 +1,42 @@
 ---
-import './main.css';
-import { Image } from 'astro:assets';
-import img_about from './icons/about.png';
-import img_blog from './icons/blog.png';
-import img_mail from './icons/mail.png';
-
 const links = [
-    {   src: img_about,
-        link: "about"},
-    {   src: img_blog,
-        link: "http://unnamedworks.com"},
-    {   src: img_mail,
-        link: "mailto: mail@unnamedworks.com"},
-]
-
+    { src: "このサイトについて", link: "about" },
+    { src: "unnamedworksについて", link: "unnamedworks" },
+];
 ---
-<p class="menu">
-    {links.map((item) =>
-        <a href={item.link}>
-            <Image src={item.src} alt="" height="50"/>
-        </a>
-    )}
-</p>
+
+<style>
+    div {
+        width: auto;
+        text-align: left;
+        display: inline-block;
+    }
+    ul {
+        padding: 0px;
+        margin: 0px;
+    }
+    ul li:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    li {
+        list-style-type: none;
+        position: relative;
+        padding-left: 0px;
+        line-height: 1.4;
+    }
+</style>
+<div>
+    <ul>
+        {
+            links.map((item) => (
+                <li>
+                    <a href={item.link}>{item.src}</a>
+                </li>
+            ))
+        }
+    </ul>
+</div>

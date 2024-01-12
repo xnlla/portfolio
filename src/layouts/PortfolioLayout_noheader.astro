@@ -1,19 +1,20 @@
 ---
-import Footer from '../components/footer/main.astro';
-import Homebutton from '../components/homebutton/main.astro';
-import Metadatas from '../components/Metadatas.astro';
+import "@/styles/global.css"
+import Footer from "../components/footer/main.astro";
+import Homebutton from "../components/homebutton/main.astro";
+import Metadatas from "../components/Metadatas.astro";
 
-const { pageTitle, homebutton_hidden, page_url, card_file} = Astro.props;
+const { pageTitle, homebutton_hidden, page_url, card_file } = Astro.props;
 ---
 
 <html lang="ja">
-  <Metadatas pageTitle={pageTitle}, page_url={page_url}, card_file={card_file} />
+  <Metadatas pageTitle={pageTitle} page_url={page_url} card_file={card_file} />
   <body>
-    <slot name="header"/>
-      <div class="contents-cover">
-        <slot />
-        <Homebutton homebutton_hidden={homebutton_hidden}/>
-        <Footer />
-      </div>
+    <slot name="header" />
+    <div class="contents-cover">
+      <slot />
+      <Homebutton homebutton_hidden={homebutton_hidden} />
+      <div><Footer /></div>
+    </div>
   </body>
 </html>
