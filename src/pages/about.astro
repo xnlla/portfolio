@@ -1,5 +1,5 @@
 ---
-import "@/styles/shape01.css";
+import "@/styles/shape02.css";
 
 import BaseLayout from "@/layouts/PortfolioLayout.astro";
 const pageTitle = "about";
@@ -9,7 +9,6 @@ const card_name = "/cards/main.png";
 import { Picture } from "astro:assets";
 import img_site from "@/images/computing.png";
 
-import Passedyears from "@/components/getpassedyear/main.tsx";
 ---
 
 <style>
@@ -39,6 +38,7 @@ import Passedyears from "@/components/getpassedyear/main.tsx";
         div.detail {
             position: unset;
             font-size: 6.5vw;
+            width: 100%;
         }
         div.picture {
             position: unset;
@@ -66,19 +66,20 @@ import Passedyears from "@/components/getpassedyear/main.tsx";
     .title {
         position: absolute;
         font-size: min(8.5vw, 95px);
-        top: 7%;
+        top: 30%;
     }
     .description {
         position: absolute;
         font-size: min(5.5vw, 60px);
         top: 50%;
-        left: 9%;
+        left: 5%;
     }
     .detail {
         position: absolute;
-        font-size: min(3.5vw, 39px);
+        font-size: min(3.3vw, 37px);
         top: 70%;
         left: 10%;
+        width: 90%;
     }
 
     .parent_textarea {
@@ -110,19 +111,13 @@ import Passedyears from "@/components/getpassedyear/main.tsx";
     }
 </style>
 <BaseLayout pageTitle={pageTitle} , page_url={url} , card_file={card_name}>
-    <div class="parent shape01">
+    <div class="parent shape02">
         <div class="picture"><Picture src={img_site} alt="about" /></div>
         <div class="parent_textarea">
             <div class="title">
-                <p>名前がきまらず</p>
-                <p>
-                    約<Passedyears
-                        client:load
-                        from="2020-11-18"
-                    />年経ちました。
-                </p>
+                <a href="https://NllA.uk/">NllA.uk</a>
             </div>
-            <div class="description">よろしくおねがいします。</div>
+            <div class="description">ー 自己紹介サイトです。</div>
             <div class="detail">
                 <p>
                     <a href="https://astro.build/">Astro</a>でプログラミング<wbr
