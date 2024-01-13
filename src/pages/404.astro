@@ -1,18 +1,17 @@
 ---
-import BaseLayout from '@/layouts/PortfolioLayout.astro';
+import BaseLayout from "@/layouts/PortfolioLayout.astro";
 const pageTitle = "404 Not Found.";
-const url= Astro.url.pathname;
-
-// import { Image } from 'astro:assets';
-// import img_404 from '../images/404.png';
-
-// const base_url = import.meta.env.SITE;
-// const img_404_url = base_url + "/404.png";
-const card_name = "/cards/main.png"
+const url = Astro.url.pathname;
+const card_name = "/cards/main.png";
 ---
-<BaseLayout pageTitle={pageTitle}, page_url={url}, card_file={card_name}>
-    <!-- <Image src={img_404_url} alt="404 not found..." width="700" height="500"/> -->
+
+<BaseLayout pageTitle={pageTitle} , page_url={url} , card_file={card_name}>
     <div style="text-align: center;">
-        <img src="/materials/404.png" alt="404 not found..." width="85%" height="auto"/>
+        <img
+            src="/materials/404.png"
+            alt="404 not found..."
+            width="85%"
+            height="auto"
+        />
     </div>
 </BaseLayout>

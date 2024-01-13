@@ -2,7 +2,8 @@
 docs/
 
 # generated types
-.astro/
+.astro/*
+!.astro/settings.json
 
 # dependencies
 node_modules/
