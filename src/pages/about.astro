@@ -13,10 +13,45 @@ import Passedyears from "@/components/getpassedyear/main.tsx";
 ---
 
 <style>
+    @media (max-width: 480px) {
+        div {
+            /* 折り返し対応 */
+            overflow-wrap: anywhere;
+            word-break: keep-all;
+
+            line-height: 1.2;
+            margin: auto;
+            padding-bottom: 12px;
+        }
+        div.parent_textarea {
+            position: unset;
+            width: 95%;
+            height: auto;
+        }
+        div.title {
+            position: unset;
+            font-size: 13.5vw;
+        }
+        div.description {
+            position: unset;
+            font-size: 9vw;
+        }
+        div.detail {
+            position: unset;
+            font-size: 6.5vw;
+        }
+        div.picture {
+            position: unset;
+            width: 100%;
+            max-width: 715px;
+        }
+        div.parent {
+            aspect-ratio: auto;
+        }
+    }
     .parent {
         position: relative;
         aspect-ratio: 11/9;
-        width: 100%;
         height: auto;
     }
     .parent_textarea {
@@ -30,23 +65,23 @@ import Passedyears from "@/components/getpassedyear/main.tsx";
     }
     .title {
         position: absolute;
-        font-size: 8.5vmin;
+        font-size: min(8.5vw, 95px);
         top: 7%;
     }
     .description {
         position: absolute;
-        font-size: 5.5vmin;
+        font-size: min(5.5vw, 60px);
         top: 50%;
         left: 9%;
     }
     .detail {
         position: absolute;
-        font-size: 3.5vmin;
+        font-size: min(3.5vw, 39px);
         top: 70%;
         left: 10%;
     }
 
-    .parent_textarea div {
+    .parent_textarea {
         padding: 1%;
         line-height: 1.5em;
         z-index: 0;
@@ -76,6 +111,7 @@ import Passedyears from "@/components/getpassedyear/main.tsx";
 </style>
 <BaseLayout pageTitle={pageTitle} , page_url={url} , card_file={card_name}>
     <div class="parent shape01">
+        <div class="picture"><Picture src={img_site} alt="about" /></div>
         <div class="parent_textarea">
             <div class="title">
                 <p>名前がきまらず</p>
@@ -89,23 +125,21 @@ import Passedyears from "@/components/getpassedyear/main.tsx";
             <div class="description">よろしくおねがいします。</div>
             <div class="detail">
                 <p>
-                    <a href="https://astro.build/">astro</a
-                    >でプログラミングされました。
+                    <a href="https://astro.build/">Astro</a>でプログラミング<wbr
+                    />されました。
                 </p>
                 <p>
                     <a
                         href="https://www.cloudflare.com/ja-jp/developer-platform/pages/"
                     >
                         Cloudflare Pages</a
-                    >でデプロイされました。
+                    >で<wbr />デプロイされました。
                 </p>
                 <p>
                     <a href="https://github.com/nkte8/portfolio">ソースコード</a
-                    >を公開しています。
+                    >を公開<wbr />しています。
                 </p>
             </div>
         </div>
-
-        <div class="picture"><Picture src={img_site} alt="about" /></div>
     </div>
 </BaseLayout>
