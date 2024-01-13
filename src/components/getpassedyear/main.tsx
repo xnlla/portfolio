@@ -13,8 +13,8 @@ export default function Dropbutton({ from }: Props) {
     const setDate: Date = new Date(from);
     const nowDate: Date = new Date(formatDate(new Date()));
 
-    const diffDay: number = 
+    const diffDay: number =
         Math.floor((nowDate.getTime() - setDate.getTime()) / 86400000 / 365);
 
-    return diffDay    
+    return diffDay
 }
