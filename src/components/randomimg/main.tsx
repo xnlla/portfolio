@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import here_png from "./images/here.png"
 import here_webp from "./images/here.webp"
 import none_png from "./images/none.png"
@@ -14,8 +15,8 @@ import noise02_png from "./images/noise02.webp"
 import noise02_webp from "./images/noise02.webp"
 
 type url = {
-    png: ImageMetadata | null,
-    webp: ImageMetadata | null,
+    png: ImageMetadata,
+    webp: ImageMetadata,
     weight: number,
 }
 const urls: url[] = [
@@ -28,7 +29,6 @@ const noises: url[] = [
     { png: noise01_png, webp: noise01_webp, weight: 0 },
     { png: noise02_png, webp: noise02_webp, weight: 0 },
 ]
-
 
 let totalweight: number = 0
 urls.forEach((value) => {
@@ -45,12 +45,9 @@ export const Randomimg = () => {
                 return item;
             }
         }
-        return {
-            png: null,
-            webp: null,
-            weight: -1,
-        }
+        return noises[0]
     }
+
     const [img, setImg] = useState<url>(noises[1])
     const imgchanger = () => {
         const pageInterval = 200
@@ -64,12 +61,19 @@ export const Randomimg = () => {
         imgchanger()
         setInterval(imgchanger, 10000)
     }, [])
+
+
     return (
         <React.StrictMode>
-            <picture>
-                <source srcSet={img.webp?.src} type="image/webp" />
-                <img src={img.png?.src} decoding="sync" className="mdpreview" />
-            </picture>
+            <div>
+                <picture>
+                    <source srcSet={img.webp.src} type="image/webp" />
+                    <img src={img.png.src} className="mdpreview" />
+                </picture>
+                <img src={noises[0].png.src} style={{display: "none"}} className="mdpreview" />
+                <img src={noises[1].png.src} style={{display: "none"}} className="mdpreview" />
+            </div>
+
         </React.StrictMode>
     )
 }
