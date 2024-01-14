@@ -8,16 +8,16 @@ const url = Astro.url.pathname;
 const card_name = "/cards/etc.png";
 import { Picture } from "astro:assets";
 import img_site from "@/images/computing.png";
-
 ---
 
 <style>
+    div {
+        /* 折り返し対応 */
+        overflow-wrap: anywhere;
+        word-break: keep-all;
+    }
     @media (max-width: 480px) {
         div {
-            /* 折り返し対応 */
-            overflow-wrap: anywhere;
-            word-break: keep-all;
-
             line-height: 1.2;
             margin: auto;
             padding-bottom: 12px;
@@ -57,9 +57,9 @@ import img_site from "@/images/computing.png";
     .parent_textarea {
         position: absolute;
         top: 1%;
-        left: 35%;
+        left: 34%;
         text-align: left;
-        width: 65%;
+        width: 64%;
         height: 60%;
         z-index: 1;
     }

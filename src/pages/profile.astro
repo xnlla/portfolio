@@ -16,8 +16,8 @@ import { Passedyears } from "@/components/getpassedyear/main.tsx";
 <style>
     div {
         /* 折り返し対応 */
-        overflow-wrap: anywhere;
         word-break: keep-all;
+        overflow-wrap: break-word;
     }
     @media (max-width: 480px) {
         div {
@@ -209,8 +209,8 @@ import { Passedyears } from "@/components/getpassedyear/main.tsx";
                 <div class="detail" style="top:50%;">
                     <p>
                         絵を描く、文字を書く、コードを書く、<wbr />
-                        お菓子を作る、パンを焼く、ゲームであそぶ、<wbr />
-                        旅行に行く、ごはんを食べるなどが好きです。
+                        お菓子を作る、パンを焼く、<wbr />ゲームであそぶ、
+                        旅行に行く、<wbr />ごはんを食べるなどが好きです。
                     </p>
                 </div>
             </div>
@@ -228,6 +228,6 @@ import { Passedyears } from "@/components/getpassedyear/main.tsx";
         </div>
     </div>
     <div class="shape02 detail" style="position:unset;margin: auto;">
-        そんな感じです。<wbr>よろしくおねがいします。
+        そんな感じです。<wbr />よろしくおねがいします。
     </div>
 </BaseLayout>
