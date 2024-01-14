@@ -1,27 +1,34 @@
 ---
 // import { Image } from 'astro:assets';
 import img_header from "./header.png";
+import img_header_mini from "./header_mini.png";
 ---
 
-<style>
+<style is:global>
+    @media (max-width: 480px) {
+        .header img.normal {
+            display: none;
+        }
+        .header img.mini {
+            display: block;
+        }
+    }
+    .header .mini {
+        display: none;
+    }
+
     .header {
         padding: 0;
-        margin: 10;
         position: static;
-        top: 0px;
-        left: 0px;
         height: 20px;
     }
 
     .header img {
         width: 100%;
-        background-size: 100%, 100%;
-        background-repeat: no-repeat, no-repeat;
         position: static;
-        top: 0px;
-        z-index: 100;
     }
 </style>
 <div class="header">
-    <img src={img_header.src} alt="" />
+    <img class="normal" src={img_header.src} alt="" />
+    <img class="mini" src={img_header_mini.src} alt="" />
 </div>
