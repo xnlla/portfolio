@@ -16,8 +16,9 @@ const { pageTitle, homebutton_hidden, page_url, card_file } = Astro.props;
     />
   </head>
   <body>
-    <slot name="header" />
+
     <div class="contents-cover">
+      <slot name="header" />
       <slot />
       <Homebutton homebutton_hidden={homebutton_hidden} />
       <div><Footer /></div>
