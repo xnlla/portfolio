@@ -51,7 +51,7 @@ export const Randomimg = () => {
             weight: -1,
         }
     }
-    const [img, setImg] = useState<url>(noises[0])
+    const [img, setImg] = useState<url>(noises[1])
     const imgchanger = () => {
         const pageInterval = 200
         for (let i = 0; i < noises.length; i++) {
@@ -68,7 +68,7 @@ export const Randomimg = () => {
         <React.StrictMode>
             <picture>
                 <source srcSet={img.webp?.src} type="image/webp" />
-                <img src={img.png?.src} decoding="auto" className="mdpreview" />
+                <img src={img.png?.src} decoding="sync" className="mdpreview" />
             </picture>
         </React.StrictMode>
     )
