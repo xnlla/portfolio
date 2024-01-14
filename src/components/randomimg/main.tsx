@@ -70,7 +70,9 @@ export const Randomimg = () => {
                     <source srcSet={img.webp.src} type="image/webp" />
                     <img src={img.png.src} className="mdpreview" />
                 </picture>
+                <img src={noises[0].webp.src} style={{display: "none"}} className="mdpreview" />
                 <img src={noises[0].png.src} style={{display: "none"}} className="mdpreview" />
+                <img src={noises[1].webp.src} style={{display: "none"}} className="mdpreview" />
                 <img src={noises[1].png.src} style={{display: "none"}} className="mdpreview" />
             </div>
 
