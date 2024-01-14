@@ -5,8 +5,7 @@ const url = Astro.url.pathname;
 import Socialbutton from "@/components/socialbutton/main.astro";
 import Menubutton from "@/components/menu/main.astro";
 
-import { Picture } from "astro:assets";
-import img_site from "@/images/site.png";
+import { Randomimg } from "@/components/randomimg/main";
 const homebutton_hidden = true;
 const card_name = "/cards/main.png";
 
@@ -17,8 +16,9 @@ import "@/styles/shape02.css";
     .shape02 {
         font-size: 3vmin;
     }
-    img {
+    .img {
         width: 95%;
+        margin:auto;
     }
     div {
         margin-bottom: 20px;
@@ -31,7 +31,7 @@ import "@/styles/shape02.css";
     card_file={card_name}
 >
     <div class="shape02">
-        <div><Picture src={img_site} alt="hello!" /></div>
+        <div class="img"><Randomimg client:load /></div>
         <div><Menubutton /></div>
         <div><Socialbutton /></div>
     </div>
