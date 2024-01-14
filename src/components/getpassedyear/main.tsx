@@ -9,7 +9,7 @@ const formatDate = (date: Date): string => {
     return `${y + "-" + m + "-" + d}`;
 };
 
-export default function Dropbutton({ from }: Props) {
+export const Passedyears = ({ from }: Props) => {
     const setDate: Date = new Date(from);
     const nowDate: Date = new Date(formatDate(new Date()));
 
