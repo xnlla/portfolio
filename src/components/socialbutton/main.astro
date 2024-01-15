@@ -7,8 +7,9 @@ import img_pixiv from "./icons//pixiv.png";
 import img_zenn from "./icons/zenn.png";
 import img_github from "./icons/github.png";
 import img_mail from "./icons/mail.png";
+import img_nkte8 from "./icons/nkte8.png";
 
-const links = [
+const my_links = [
     { src: img_bluesky, alt: "bluesky", link: "https://bsky.nlla.uk/" },
     { src: img_twitter, alt: "X", link: "https://twitter.com/Il_______l" },
     {
@@ -21,15 +22,19 @@ const links = [
         alt: "pixiv",
         link: "https://www.pixiv.net/users/61472849",
     },
+];
+const nkte_links = [
     { src: img_zenn, alt: "zenn", link: "https://zenn.dev/nkte8" },
     { src: img_github, alt: "github", link: "https://github.com/nkte8" },
-    { src: img_mail, alt: "mail", link: "mailto: mail@unnamedworks.com" },
+    { src: img_mail, alt: "mail", link: "mailto: mail@nlla.uk" },
 ];
 ---
 
 <style>
-    div {
-        margin: 0;
+    .social {
+        margin: auto;
+        width: 250px;
+        position: relative;
     }
     .social img {
         transform: scale(1);
@@ -37,21 +42,58 @@ const links = [
         height: 50px;
         width: auto;
     }
-    .social img:hover {
+    .social img.link:hover {
         transform: scale(1.2);
     }
-    a {
+    img {
         margin: 0 -5px 0 -5px;
     }
-    .social {
+    .button {
+        margin-right: 2%;
+        width: 57px;
+        height: 50px;
         display: inline;
+    }
+    .button:hover {
+        transform: translateX(15%);
+    }
+    .button img:hover {
+        transform: translateX(15%);
+    }
+    .hint {
+        font-size: 22px;
+        position: absolute;
+        top: 0%;
+        left: -0%;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.1s ease-out;
+        z-index: -1;
+    }
+    .button:hover .hint {
+        left: -15%;
+        visibility: visible;
+        opacity: 1;
     }
 </style>
 <div class="social">
     {
-        links.map((item) => (
+        my_links.map((item) => (
             <a href={item.link}>
-                <Image src={item.src} alt={item.alt} height="50" />
+                <Image class="link" src={item.src} alt={item.alt} height="50" />
+            </a>
+        ))
+    }
+</div>
+<div class="social">
+    <span class="button">
+        <span class="hint">ねこの<br />Links</span>
+        <Image src={img_nkte8} alt="nkte8 account" height="50" />
+    </span>
+    {
+        nkte_links.map((item) => (
+            <a href={item.link}>
+                <Image class="link" src={item.src} alt={item.alt} height="50" />
             </a>
         ))
     }
