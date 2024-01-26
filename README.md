@@ -1,30 +1,54 @@
-README.md
-# 管理方法  
+# N//A 
 
-## astroのセットアップ
-- nodeのバージョンはCloudflareと合わせること。
+Welcome to source code!  
+This is [@NllA.uk](https://bsky.app/profile/nlla.uk)(X.com: [@Il_______l](https://twitter.com/Il_______l))'s website [N//A.uk](https://nlla.uk/) source code.
+
+## How it builded?
+
+This site is build by Astro.js.
+
+### Setup 
+
+Lauch on ubuntu 22.04 (on Hyper-V windows11)
 ```sh
-docker run --rm -v $PWD:/src -w /src -u `id -u`:`id -g` -p 80:4321 -it node:18.17.1 npm install
+npm install
 ```
 
-## astroの実行方法
-
-環境設定値を`.env.template`に沿って作成する。
-
-node.jsコンテナを起動
-- nodeのバージョンはCloudflareと合わせ18を指定。
+build on docker 
 ```sh
-docker run --rm -v $PWD:/src -w /src -u `id -u`:`id -g` -p 80:4321 -it node:18.17.1 /bin/bash
+docker run --rm -v $PWD:/src -w /src -u `id -u`:`id -g` -p 4321:4321 -it node:18.17.1 /bin/bash
+npm install
 ```
 
-nodejs実行方法
+### Build
+
+Start dev server for debugging.
 ```sh
-# 仮想DOM実行(astro SSRモード起動)
 npm run dev
-# 静的サイトジェネレート(astro SSG build)
+```
+
+SSR build.
+```sh
 npm run build
 ```
 
-## デプロイ方法
+### Deploy
 
-Cloudflareで自動でビルドされるため、サーバへのアップロードは不要。
+This site is powerd by Cloudflare pages.
+
+### Convenience tools
+
+`convertimgs.sh` helps .png on repository compress by pngquant.
+```sh
+./convertimgs.sh
+```
+
+`convertcard.sh` helps images resize OGP card.
+```sh
+./convertcard.sh <Image path, output to public/cards/>
+```
+
+`putshape02.sh` is downloader `shape02` font customized by [@NllA.uk](https://bsky.app/profile/nlla.uk) (X.com: [@Il_______l](https://twitter.com/Il_______l))
+```sh
+./putshape02.sh
+```
