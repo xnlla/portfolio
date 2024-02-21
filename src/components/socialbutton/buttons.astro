@@ -1,0 +1,41 @@
+---
+interface Props {
+    links: Array<{
+        link: string;
+        src: ImageMetadata;
+        alt: string;
+    }>;
+}
+const { links } = Astro.props;
+---
+
+<style>
+    a img {
+        transform: scale(1);
+        transition: 0.1s ease-out;
+    }
+    a img.link:hover {
+        transform: scale(1.2);
+    }
+    img {
+        width: auto;
+        height: 50px;
+    }
+</style>
+
+{
+    links.map((item) =>
+        item.link !== "" ? (
+            <a href={item.link}>
+                <img class="link" src={item.src.src} alt={item.alt} />
+            </a>
+        ) : (
+            <img
+                class="link"
+                style={{ cursor: "not-allowed" }}
+                src={item.src.src}
+                alt={item.alt}
+            />
+        ),
+    )
+}
