@@ -59,7 +59,7 @@ export const Randomimg = () => {
 
     useEffect(() => {
         imgchanger()
-        setInterval(imgchanger, 10000)
+        setInterval(imgchanger, 5000)
     }, [])
 
 

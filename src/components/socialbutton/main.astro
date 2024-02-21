@@ -1,21 +1,22 @@
 ---
 import { Image } from "astro:assets";
 import img_bluesky from "./icons/bluesky.png";
-import img_twitter from "./icons/twitter.png";
+import img_twitter from "./icons/x.png";
 import img_instagram from "./icons/instagram.png";
 import img_pixiv from "./icons//pixiv.png";
 import img_zenn from "./icons/zenn.png";
 import img_github from "./icons/github.png";
 import img_mail from "./icons/mail.png";
 import img_nkte8 from "./icons/nkte8.png";
+import Buttons from "./buttons.astro";
 
-const my_links = [
+const nllaLinks = [
     { src: img_bluesky, alt: "bluesky", link: "https://bsky.nlla.uk/" },
-    { src: img_twitter, alt: "X", link: "https://twitter.com/Il_______l" },
+    { src: img_twitter, alt: "X(Leaved at 2024/2/21)", link: "" },
     {
         src: img_instagram,
         alt: "instagram",
-        link: "https://www.instagram.com/l._________l/",
+        link: "https://www.instagram.com/nlla.uk/",
     },
     {
         src: img_pixiv,
@@ -23,7 +24,7 @@ const my_links = [
         link: "https://www.pixiv.net/users/61472849",
     },
 ];
-const nkte_links = [
+const nkteLinks = [
     { src: img_zenn, alt: "zenn", link: "https://zenn.dev/nkte8" },
     { src: img_github, alt: "github", link: "https://github.com/nkte8" },
     { src: img_mail, alt: "mail", link: "mailto: mail@nlla.uk" },
@@ -36,18 +37,7 @@ const nkte_links = [
         width: 250px;
         position: relative;
     }
-    .social img {
-        transform: scale(1);
-        transition: 0.1s ease-out;
-        height: 50px;
-        width: auto;
-    }
-    .social img.link:hover {
-        transform: scale(1.2);
-    }
-    img {
-        margin: 0 -5px 0 -5px;
-    }
+
     .button {
         margin-right: 2%;
         width: 57px;
@@ -77,24 +67,12 @@ const nkte_links = [
     }
 </style>
 <div class="social">
-    {
-        my_links.map((item) => (
-            <a href={item.link}>
-                <Image class="link" src={item.src} alt={item.alt} height="50" />
-            </a>
-        ))
-    }
-</div>
-<div class="social">
-    <span class="button">
-        <span class="hint">ねこの<br />Links</span>
-        <Image src={img_nkte8} alt="nkte8 account" height="50" />
-    </span>
-    {
-        nkte_links.map((item) => (
-            <a href={item.link}>
-                <Image class="link" src={item.src} alt={item.alt} height="50" />
-            </a>
-        ))
-    }
+    <Buttons links={nllaLinks} />
+    <div class="social">
+        <span class="button">
+            <span class="hint">ねこの<br />Links</span>
+            <Image src={img_nkte8} alt="nkte8 account" height="50" />
+        </span>
+        <Buttons links={nkteLinks} />
+    </div>
 </div>
