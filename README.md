@@ -1,7 +1,7 @@
 # N//A 
 
 Welcome to source code!  
-This is [@NllA.uk](https://bsky.app/profile/nlla.uk)(X.com: [@Il_______l](https://twitter.com/Il_______l))'s website [N//A.uk](https://nlla.uk/) source code.
+This is [@NllA.uk](https://bsky.app/profile/nlla.uk)(X.com -> leaved)'s website [N//A.uk](https://nlla.uk/) source code.
 
 ## How it builded?
 
