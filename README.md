@@ -48,7 +48,7 @@ This site is powerd by Cloudflare pages.
 ./convertcard.sh <Image path, output to public/cards/>
 ```
 
-`putshape02.sh` is downloader `shape02` font customized by [@NllA.uk](https://bsky.app/profile/nlla.uk) (X.com: [@Il_______l](https://twitter.com/Il_______l))
+`putshape02.sh` is downloader `shape02` font customized by [@NllA.uk](https://bsky.app/profile/nlla.uk) (X.com -> leaved)
 ```sh
 ./putshape02.sh
 ```
