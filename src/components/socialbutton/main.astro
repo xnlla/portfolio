@@ -1,34 +1,24 @@
 ---
-import { Image } from "astro:assets";
-import img_bluesky from "./icons/bluesky.png";
-import img_twitter from "./icons/x.png";
-import img_instagram from "./icons/instagram.png";
-import img_pixiv from "./icons//pixiv.png";
-import img_zenn from "./icons/zenn.png";
-import img_github from "./icons/github.png";
-import img_mail from "./icons/mail.png";
-import img_nkte8 from "./icons/nkte8.png";
-import Buttons from "./buttons.astro";
+import img_bluesky from './icons/bluesky.png'
+import img_twitter from './icons/x.png'
+import img_instagram from './icons/instagram.png'
+import img_pixiv from './icons//pixiv.png'
+import Buttons from './buttons.astro'
 
 const nllaLinks = [
-    { src: img_bluesky, alt: "bluesky", link: "https://bsky.nlla.uk/" },
-    { src: img_twitter, alt: "X(Leaved at 2024/2/21)", link: "" },
+    { src: img_bluesky, alt: 'bluesky', link: 'https://bsky.nlla.uk/' },
+    { src: img_twitter, alt: 'X(Leaved at 2024/2/21)', link: '' },
     {
         src: img_instagram,
-        alt: "instagram",
-        link: "https://www.instagram.com/nlla.uk/",
+        alt: 'instagram',
+        link: 'https://www.instagram.com/nlla.uk/',
     },
     {
         src: img_pixiv,
-        alt: "pixiv",
-        link: "https://www.pixiv.net/users/61472849",
+        alt: 'pixiv',
+        link: 'https://www.pixiv.net/users/61472849',
     },
-];
-const nkteLinks = [
-    { src: img_zenn, alt: "zenn", link: "https://zenn.dev/nkte8" },
-    { src: img_github, alt: "github", link: "https://github.com/nkte8" },
-    { src: img_mail, alt: "mail", link: "mailto: mail@nlla.uk" },
-];
+]
 ---
 
 <style>
@@ -68,11 +58,4 @@ const nkteLinks = [
 </style>
 <div class="social">
     <Buttons links={nllaLinks} />
-    <div class="social">
-        <span class="button">
-            <span class="hint">ねこの<br />Links</span>
-            <Image src={img_nkte8} alt="nkte8 account" height="50" />
-        </span>
-        <Buttons links={nkteLinks} />
-    </div>
 </div>

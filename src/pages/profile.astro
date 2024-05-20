@@ -1,16 +1,16 @@
 ---
-import "@/styles/shape02.css";
+import '@/styles/shape02.css'
 
-import BaseLayout from "@/layouts/PortfolioLayout.astro";
-const pageTitle = "profile";
-const url = Astro.url.pathname;
+import BaseLayout from '@/layouts/PortfolioLayout.astro'
+const pageTitle = 'profile'
+const url = Astro.url.pathname
 
-const card_name = "/cards/prof.png";
-import { Picture } from "astro:assets";
-import img_prof from "@/images/prof.png";
-import img_me from "@/images/me.png";
+const card_name = '/cards/prof.png'
+import { Picture } from 'astro:assets'
+import img_prof from '@/images/prof.png'
+import img_me from '@/images/me.png'
 
-import { Passedyears } from "@/components/getpassedyear/main.tsx";
+import { Passedyears } from '@/components/getpassedyear/main.tsx'
 ---
 
 <style>
@@ -114,7 +114,7 @@ import { Passedyears } from "@/components/getpassedyear/main.tsx";
     }
     .parent_textarea div::before {
         background-color: #fff;
-        content: "";
+        content: '';
         filter: blur(5px);
         border-radius: 30px;
         position: absolute;
@@ -132,7 +132,7 @@ import { Passedyears } from "@/components/getpassedyear/main.tsx";
     }
     .picture::after {
         position: absolute;
-        content: "";
+        content: '';
         top: 0;
         bottom: 0;
         left: 0;
@@ -147,8 +147,8 @@ import { Passedyears } from "@/components/getpassedyear/main.tsx";
         overflow-wrap: unset;
         margin: auto;
         padding-left: 2em;
-        font-family: Arial, "MS PMincho", "Hiragino Mincho ProN",
-            "Noto Serif CJK JP";
+        font-family: Arial, 'MS PMincho', 'Hiragino Mincho ProN',
+            'Noto Serif CJK JP';
         font-size: min(2.5vw, 28px);
     }
     .parent_textarea div.css_rikai::before {
@@ -190,9 +190,12 @@ import { Passedyears } from "@/components/getpassedyear/main.tsx";
                 </div>
                 <div class="detail" style="top:65%;">
                     <p>決まるまで未定義で<wbr />お願いします。</p>
-                    <p>ななしとか、ななみんとか、N/Aさんとか、<wbr />
-                        アビさんとか、███さんとか、</p>
-                        <p><Picture
+                    <p>
+                        ななしとか、ななみんとか、N/Aさんとか、<wbr />
+                        アビさんとか、███さんとか、
+                    </p>
+                    <p>
+                        <Picture
                             src={img_me}
                             alt="🖤"
                             class="charactor"
